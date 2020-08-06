@@ -2,8 +2,8 @@ import * as singleSpa from 'single-spa';
 
 singleSpa.registerApplication('home-react', () =>
   import ('../home-react/home-react.app.js'), pathPrefix('/home'));
-singleSpa.registerApplication('login-react', () =>
-  import ('../login-react/login-react.app.js'), pathPrefix('/login'));
+singleSpa.registerApplication('auth', () =>
+  import ('../auth/auth.app.js'), pathPrefix('/auth'));
 singleSpa.registerApplication('app-1', () =>
   import ('../app1/app1.js'), pathPrefix('/app1'));
 singleSpa.registerApplication('app-2', () =>

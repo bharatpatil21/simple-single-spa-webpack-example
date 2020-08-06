@@ -6,10 +6,10 @@ class Home extends React.Component {
       singleSpaNavigate("/home");
     };
     const handleLogin = () => {
-      singleSpaNavigate("/login");
+      singleSpaNavigate("/auth/login");
     };
     const handleSignUp = () => {
-      singleSpaNavigate("/app1");
+      singleSpaNavigate("/auth/signup");
     };
     return (
       <div>

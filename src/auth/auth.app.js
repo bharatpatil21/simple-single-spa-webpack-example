@@ -24,10 +24,10 @@ export const unmount = [
 
 function domElementGetter() {
   // Make sure there is a div for us to render into
-  let el = document.getElementById('react');
+  let el = document.getElementById('auth');
   if (!el) {
-    el = document.createElement('react');
-    el.id = 'react';
+    el = document.createElement('auth');
+    el.id = 'auth';
     document.body.appendChild(el);
   }
 
