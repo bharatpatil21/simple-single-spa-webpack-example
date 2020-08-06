@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "A simple example of how to use webpack with single-spa",
   "scripts": {
-    "watch": "webpack-dev-server --open",
+    "build:tailwind": "tailwindcss build src/css/tailwind.css -o src/css/tailwind.output.css",
+    "watch:tailwind": "chokidar 'src/**/*.css' 'src/**/*.scss' --ignore src/css/tailwind.output.css -c 'npm run build:tailwind'",
+    "dev": "webpack-dev-server --open",
+    "watch": " npm-run-all build:tailwind --parallel watch:tailwind dev",
     "build": "webpack --config webpack.config.js -p",
     "start": "node server.js"
   },
@@ -19,14 +22,17 @@
   "homepage": "https://github.com/joeldenning/simple-single-spa-webpack-example#readme",
   "devDependencies": {
     "babel-core": "^6.25.0",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^7.1.1",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
-    "babel-jest": "^24.9.0",
+    "chokidar-cli": "^2.1.0",
     "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^4.2.0",
     "http-server": "^0.10.0",
     "jest": "^24.9.0",
+    "npm-run-all": "^4.1.5",
     "ts-loader": "^5.3.3",
     "typescript": "3.5.*",
     "webpack": "^4.29.6",
@@ -46,11 +52,14 @@
     "path": "^0.12.7",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-router": "^5.2.0",
     "reflect-metadata": "^0.1.10",
     "rxjs": "~6.5.3",
     "single-spa": "^3.8.1",
     "single-spa-angular": "^2.2.1",
     "single-spa-react": "^2.9.0",
+    "style-loader": "^1.2.1",
+    "tailwindcss": "^1.6.2",
     "zone.js": "^0.8.16"
   }
 }
