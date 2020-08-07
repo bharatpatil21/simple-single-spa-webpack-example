@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app2',
+  selector: 'dashboard',
   template: `
     <div style="margin-top: 100px;">
       This was rendered by App2 which is written in Angular
@@ -12,5 +12,5 @@ import {Component} from '@angular/core';
     <router-outlet></router-outlet>
   `,
 })
-export class App2 {
+export class Dashboard {
 }

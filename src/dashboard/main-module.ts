@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
-import { App2 } from "./app2.component.ts";
+import { DashboardComponent } from "./dashboard/dashboard.component.ts";
 import { Subroute1 } from "./subroute1.component.ts";
 import { Subroute2 } from "./subroute2.component.ts";
 import { enableProdMode } from "@angular/core";
@@ -22,8 +22,8 @@ enableProdMode();
 
 @NgModule({
   imports: [BrowserModule, RouterModule.forRoot(appRoutes, {})],
-  providers: [{ provide: APP_BASE_HREF, useValue: "/app2/" }],
-  declarations: [App2, Subroute1, Subroute2],
-  bootstrap: [App2],
+  providers: [{ provide: APP_BASE_HREF, useValue: "/dashboard/" }],
+  declarations: [DashboardComponent, Subroute1, Subroute2],
+  bootstrap: [DashboardComponent],
 })
 export default class MainModule {}

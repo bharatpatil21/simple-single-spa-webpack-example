@@ -7,57 +7,43 @@ import Button from "../../components/Button";
 class SignUp extends React.Component {
   render() {
     return (
-      <div className="h-screen p-5 md:flex bg-green-300">
-        <div className="w-3/4 float-right">
+      <div className="flex h-screen flex-col">
+        <div className="flex w-full p-3">
+          <Link to="/home">
+            <img src="images/logo.gif" className="w-56 flex-row" />
+          </Link>
+        </div>
+        <div className="flex flex-col w-1/4 p-10">
           <div className="text-2xl font-bold my-5">Welcome to E Learing</div>
-          <div className="flex justify-between">
-            <Input
-              type="text"
-              inputType="underline"
-              placeholder="First name"
-              width="w-56"
-            />
-            <Input
-              type="text"
-              inputType="underline"
-              placeholder="Last name"
-              width="w-56"
-            />
-          </div>
+          <Input type="text" inputType="underline" placeholder="First name" />
+          <Input type="text" inputType="underline" placeholder="Last name" />
           <Input type="text" inputType="underline" placeholder="Enter email" />
-          <div className="flex justify-between">
-            <Input
-              type="password"
-              inputType="underline"
-              placeholder="Password"
-              width="w-56"
-            />
-            <Input
-              type="password"
-              inputType="underline"
-              placeholder="Confirm Password"
-              width="w-56"
-            />
-          </div>
-          <div className="mt-5">
-            <Button
-              title="Signup"
-              color="bg-primary"
-              textColor="text-light"
-              width="w-1/2"
-            />
-            <div className="my-1 text-gray-700">
-              Already have an account?
+          <Input type="password" inputType="underline" placeholder="Password" />
+          <Input
+            type="password"
+            inputType="underline"
+            placeholder="Confirm Password"
+          />
+          <Button title="Sign Up" color="bg-primary" textColor="text-light" />
+          <div className="flex items-center mx-auto my-2 text-gray-600">
+            <span>
+              If dont have an account?{" "}
               <Link to="/auth/login">
-                <span className="cursor-pointer font-bold text-secondary pl-3">
-                  Sign In
+                <span className="cursor-pointer text-sm font-bold">
+                  {" "}
+                  Singin
                 </span>
               </Link>
-            </div>
+            </span>
           </div>
+        </div>
+        <div className="flex flex-col">
+          {/* <img src={img} className="w-64" /> */}
         </div>
       </div>
     );
   }
 }
+
+const img = require("../../../../images/singup.png");
 export default SignUp;

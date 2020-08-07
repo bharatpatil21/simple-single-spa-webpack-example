@@ -46,6 +46,20 @@ module.exports = {
         test: /\.tsx?$/,
         loader: "ts-loader",
       },
+      {
+        test: /\.(jpg|JPG|jpeg|png|gif|mp3|svg|ttf|woff2|woff|eot)$/gi,
+        include: /images/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'imagesss/',
+              publicPath: 'imagesss/'
+            }
+          }
+        ]
+      }
     ],
   },
   node: {
