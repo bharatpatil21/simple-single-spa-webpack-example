@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect, Link, withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 import Input from "../../components/Input";
 import Button from "../../components/Button";
@@ -9,8 +9,7 @@ class Login extends React.Component {
     super(props);
   }
   onSubmit() {
-    // singleSpaNavigate("/app2");
-    this.props.history.push("/app2");
+    this.props.history.push("/dashboard");
   }
   render() {
     return (
@@ -33,7 +32,7 @@ class Login extends React.Component {
             title="Signin"
             color="bg-primary"
             textColor="text-light"
-            onClick={() => this.onSubmit()}
+            handleClick={() => this.onSubmit()}
           />
           <div className="flex items-center mx-auto my-2 text-gray-600">
             <span>

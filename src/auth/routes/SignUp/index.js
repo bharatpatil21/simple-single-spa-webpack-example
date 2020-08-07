@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 
-class SignUp extends React.Component {
+class Signup extends React.Component {
   render() {
     return (
       <div className="flex h-screen flex-col">
@@ -46,4 +46,4 @@ class SignUp extends React.Component {
 }
 
 const img = require("../../../../images/singup.png");
-export default SignUp;
+export default Signup;
